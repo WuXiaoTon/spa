@@ -9,9 +9,11 @@ var progress=function(obj){
   }
   else if(obj.value=="stop"){
     time=window.clearInterval(time);
+    x=1;
   }
   else if(obj.value=="restart"){
     time=window.clearInterval(time);
     pro.value=0;
+    x=1;
   }
 }
