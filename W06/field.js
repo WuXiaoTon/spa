@@ -10,6 +10,10 @@ else if(reg.test(width.value)==false){
   one.innerHTML="请输入数值！";
     width.focus();
 }
+else if(width.value<0){
+  one.innerHTML="请输入大于0的数！";
+    width.focus();
+}
   else{
      one.innerHTML='';
   }
@@ -25,6 +29,10 @@ if (height.value==""){
 else if(reg.test(height.value)==false){
   two.innerHTML="请输入数值！";
   height.focus();
+}
+else if(height.value<0){
+  two.innerHTML="请输入大于0的数！";
+    height.focus();
 }
 else{
   two.innerHTML="";
