@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>H5校验</title>
+</head>
+<body>
+  <div class="rectangle">
+    <form>
+      <label for="width">宽度</label>
+      <input type="number" class="width" id="width" min="0" step="0.01" required>
+      <span style="color:red;" id="widthErr">*</span>
+      <br/>
+      <label for="height">高度</label>
+      <input type="number" class="height" id="height" min="0" step="0.01" required>
+      <span style="color:red;" id="heightErr">*</span>
+      <br/>
+      <input type="submit" id="cal" value="计算">
+      <br/>
+      <label for="preimeter">周长</label>
+      <input type="textbox" class="preimeter" id="preimeter">
+      <label for="area">面积</label>
+      <input type="textbox" class="area" id="area">
+    </form>
+  </div>
+</body>
+<script src="H5.js"></script>
+</html>
