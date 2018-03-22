@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Echarts</title>
+  <link rel="stylesheet" href="echarts.css">
+  <script src="../node_modules/echarts/dist/echarts.min.js"></script>
+</head>
+<body>
+  <div id="main" style="width:600px;height:400px;">
+    
+  </div>
+  <script type="text/javascript">
+    var myChart=echarts.init(document.getElementById('main'));
+    var option={
+title:{
+        text:'二进熵函数曲线'
+      },
+tooltip:{
+          trigger:'axis'
+        },
+        lengend:{
+          left:'center',
+          top:24,
+          data:['信息量']
+        },
+toolbox:{
+feature:{
+dataView:{},
+         saveAsImage:{
+           pixelRatio:2
+         },
+restore:{}
+        }
+        },
+xAxis:{
+        data:["0","0.1","0.2","0.3","0.4","0.5","0.6","0.7","0.8","0.9","1"]
+      },
+yAxis:{},
+      series:[{
+        name:'信息量',
+        type:'line',
+        data:[0,0.47,0.72,0.88,0.97,1,0.97,0.88,0.72,0.47,0]
+      }]
+    };
+  myChart.setOption(option);
+  </script>
+</body>
+</html>
