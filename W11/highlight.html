@@ -3,10 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <title>highlight</title>
-  <link rel="stylesheet" href="highlight.css">
+  <link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/8.0/styles/monokai_sublime.min.css">
 </head>
 <body>
-  highlight
+  <textarea id="text" name="text" cols="30" rows="10">var a='hello world!';</textarea>
+  </br>
+  <input type="button" value="添加代码" onclick="add()">
+  <div id="codes"> 
+  </div>
 </body>
-<script src="highlight.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/8.0/highlight.min.js"></script>
+<script>
+var add=function(){
+  var text=document.getElementById('text');
+  var codes=document.getElementById('codes');
+  codes.innerHTML=codes.innerHTML+"<div><pre><code>"+text.value+"</code></pre></div>";
+hljs.highlightBlock(codes);
+}
+</script>
 </html>
